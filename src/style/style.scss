@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+*{
+    font-family: 'Courgette', cursive;
+    font-weight: bold;
+    font-size: 1.08em;
+
+    
+}
+
+html{
+    background-color: #1a1a1a;
+}
+
+body{
+    margin: 6em auto;
+    width: 600px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+#drum-machine {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    
+}
+
+.display-container {
+    flex: 1;
+    margin-top: 5px;
+    
+   
+}
+
+.drum-pads-container {
+    flex: 2;
+}
+
+.drum-pad {
+    width: 80px;
+    height: 70px;
+    border: none;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: #595959;
+    cursor: pointer;
+}
+
+@keyframes stretchOut {
+  0%{
+    background: #7cb853;
+  }
+
+  100%{
+    background: #7cb853;
+
+  }
+}
+.pad-animation{
+  animation-name: stretchOut;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+#display{
+    color: #ffffff;
+    font-size: 0.7em;
+    padding: 8px;
+}
+
+p{
+    margin: 0;
+    color: #ffffff;
+    font-size: 0.7em;
+}   
+
+.bank{
+    margin-bottom: 0;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+h1{
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333333;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 26px;
+    left: 0;
+    bottom: 0;
+    background-color: #595959;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #333333;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #333333;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #333333;   
+
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 20px;
+    width: 39px;
+    border-radius: 7px;
+    background: #595959;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -0.5px;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #333333;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #333333;   
+  }
+  input[type=range]::-moz-range-thumb {
+    height: 20px;
+    width: 39px;
+    border-radius: 7px;
+    background: #595959;
+    cursor: pointer;
+    /*-webkit-appearance: none;*/
+    margin-top: -0.5px;
+  }
+  input[type=range]::-ms-track {
+
+    width: 100%;
+    height: 13px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #333333;
+    border-radius: 50px;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #333333;
+    border-radius: 50px;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    height: 20px;
+    width: 39px;
+    border-radius: 7px;
+    background: #595959;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #333333;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #333333;
+  }
+  
